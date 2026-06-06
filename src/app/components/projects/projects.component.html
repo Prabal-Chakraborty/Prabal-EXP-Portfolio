@@ -1,0 +1,31 @@
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-tag reveal">Work</div>
+    <h2 class="reveal">Featured Projects</h2>
+    <div class="section-line reveal"></div>
+    <div class="projects-grid">
+      @for (project of projects; track project.number; let i = $index) {
+        <div class="project-card reveal" [class.reveal-delay-1]="i % 3 === 1" [class.reveal-delay-2]="i % 3 === 2">
+          <div class="project-thumb" [ngClass]="project.thumbClass">
+            <svg [ngClass]="project.accentClass" viewBox="0 0 64 64" fill="currentColor" [innerHTML]="projectIcon(project.icon)"></svg>
+            <span class="project-num">{{ project.number }}</span>
+            <div class="project-links">
+              <a [href]="project.github" class="project-link" title="GitHub" target="_blank" rel="noreferrer">G</a>
+              <a [href]="project.live" class="project-link" title="Live" target="_blank" rel="noreferrer">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">{{ project.category }}</div>
+            <div class="project-title">{{ project.title }}</div>
+            <p class="project-desc">{{ project.description }}</p>
+            <div class="project-stack">
+              @for (tech of project.stack; track tech) {
+                <span class="stack-tag">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section id="contact">
+  <div class="section-inner contact-grid">
+    <div class="contact-info">
+      <div class="section-tag reveal">Contact</div>
+      <h2 class="reveal">Let’s build something impactful</h2>
+      <div class="section-line reveal"></div>
+      <p class="reveal">Interested in Angular development, enterprise dashboards, map-based experiences, or a strong frontend engineer for your team? Let’s connect.</p>
+      <div class="contact-links">
+        <a class="contact-link reveal" href="mailto:prabal24c&#64;gmail.com">
+          <div class="contact-link-icon">✉</div>
+          <div class="contact-link-text"><div class="contact-link-label">Email</div><div class="contact-link-val">prabal24c&#64;gmail.com</div></div>
+        </a>
+        <a class="contact-link reveal reveal-delay-1" href="https://www.linkedin.com/in/prabal-chakraborty-82b61a212/" target="_blank" rel="noreferrer">
+          <div class="contact-link-icon">in</div>
+          <div class="contact-link-text"><div class="contact-link-label">LinkedIn</div><div class="contact-link-val">linkedin.com/in/Prabal</div></div>
+        </a>
+        <a class="contact-link reveal reveal-delay-2" href="https://github.com/Prabal-Chakraborty" target="_blank" rel="noreferrer">
+          <div class="contact-link-icon">GH</div>
+          <div class="contact-link-text"><div class="contact-link-label">GitHub</div><div class="contact-link-val">github.com/Prabal</div></div>
+        </a>
+      </div>
+    </div>
+    <form class="contact-form reveal" (submit)="$event.preventDefault()">
+      <div class="form-group"><label for="name">Name</label><input id="name" type="text" [(ngModel)]="name" name="name" placeholder="Your name"></div>
+      <div class="form-group"><label for="email">Email</label><input id="email" type="email" [(ngModel)]="email" name="email" placeholder="your-email&#64;example.com"></div>
+      <div class="form-group"><label for="message">Message</label><textarea id="message" [(ngModel)]="message" name="message" placeholder="Tell me about your project"></textarea></div>
+      <button class="form-submit" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>

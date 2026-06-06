@@ -1,0 +1,25 @@
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-tag reveal">Journey</div>
+    <h2 class="reveal">Work Experience</h2>
+    <div class="section-line reveal"></div>
+    <div class="exp-timeline">
+      @for (item of experience; track item.role) {
+        <div class="exp-item reveal">
+          <div class="exp-dot"></div>
+          <div class="exp-meta">
+            <span class="exp-period">{{ item.period }}</span>
+            <span class="exp-company">{{ item.company }}</span>
+          </div>
+          <div class="exp-role">{{ item.role }}</div>
+          <p class="exp-desc">{{ item.description }}</p>
+          <div class="exp-techs">
+            @for (tech of item.techs; track tech; let i = $index) {
+              <span class="skill-tag" [class.primary]="i === 0">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

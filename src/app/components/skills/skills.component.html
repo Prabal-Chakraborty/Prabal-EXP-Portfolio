@@ -1,0 +1,19 @@
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-tag reveal">Skills & Technologies</div>
+    <h2 class="reveal">My Tech Stack</h2>
+    <div class="section-line reveal"></div>
+    <div class="skills-cats">
+      @for (category of categories; track category.title; let i = $index) {
+        <div class="skill-cat reveal" [class.reveal-delay-1]="i===1" [class.reveal-delay-2]="i===2" [class.reveal-delay-3]="i===3">
+          <div class="skill-cat-title">{{ category.title }}</div>
+          <div class="skill-tags">
+            @for (tag of category.tags; track tag; let j = $index) {
+              <span class="skill-tag" [class.primary]="j < 2">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
